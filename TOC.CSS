@@ -48,6 +48,7 @@
     
       .toc {
         position: fixed; /* Fix the TOC to the viewport */
+        padding: 2.5%;
         left: 0;
         right: 0;
         bottom: 0;
@@ -55,30 +56,27 @@
         background: color(4); /* Background color for visibility */
         transition: top 0.3s ease-in-out;
       }
-  
+
       .toc h3 {
-        position: absolute;
+        order: +1;
         bottom: 0; /* Position at the bottom of the viewport */
         left: 0;
         width: 100%; /* Span the full width of the container */
         margin: 0; /* Reset margin */
-        padding: 10px; /* Padding for better readability */
-        /*background-color: #333; /* Background of the toggle */
         color: white; /* Color of the text */
         text-align: center;
         cursor: pointer;
       }
-  
+
       .toc ul {
         display: none; /* Initially hide the TOC list */
         width: 100%; /* Full width */
         padding: 0; /* Reset padding */
         flex-direction: column;
-        margin-bottom: 50px; /* Give space for the toggle button */
+        margin-bottom: 2rem; /* Give space for the toggle button */
       }
-  
+
         .toc ul.show {
           display: flex; /* Show the TOC list when toggled */
         }
   }
-  
