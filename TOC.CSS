@@ -1,0 +1,84 @@
+.toc-wrapper {
+    overflow: visible;
+  }
+      .toc h2 {
+        margin-top: 0;
+      }
+      .toc {
+        display:flex;
+        flex-direction: column;
+        border: 1px solid color(3);
+        border-radius: var(--bor-rad-50);
+        box-shadow: 4px 4px 0 color(1);
+        padding: 7%;
+      }
+  
+    
+    
+    
+    .toc ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    .toc li {
+      margin-bottom: 5px;
+    }
+    
+    .toc a {
+      color: color(3);
+      text-decoration: none;
+      font-weight: 400;
+      transition: 0.4s ease-in-out;
+    }
+  
+    /*Stuling TOC elements on hover and when they enter the viewport*/
+    .toc a:hover,.toc .highlight {
+      color: color(1);
+      letter-spacing: 0.01em;
+    
+    }
+  
+  
+  /*TOC styles on mobile devices*/
+  @media (max-width: 800px) {
+    .sidebar--toc  {
+      z-index: 5;
+    }
+    
+      .toc {
+        position: fixed; /* Fix the TOC to the viewport */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 5; /* Make sure it's above other content */
+        background: color(4); /* Background color for visibility */
+        transition: top 0.3s ease-in-out;
+      }
+  
+      .toc h3 {
+        position: absolute;
+        bottom: 0; /* Position at the bottom of the viewport */
+        left: 0;
+        width: 100%; /* Span the full width of the container */
+        margin: 0; /* Reset margin */
+        padding: 10px; /* Padding for better readability */
+        /*background-color: #333; /* Background of the toggle */
+        color: white; /* Color of the text */
+        text-align: center;
+        cursor: pointer;
+      }
+  
+      .toc ul {
+        display: none; /* Initially hide the TOC list */
+        width: 100%; /* Full width */
+        padding: 0; /* Reset padding */
+        flex-direction: column;
+        margin-bottom: 50px; /* Give space for the toggle button */
+      }
+  
+        .toc ul.show {
+          display: flex; /* Show the TOC list when toggled */
+        }
+  }
+  
